@@ -195,7 +195,7 @@
                                     <div class="input-group">
                                         <span class="input-group-addon">Մակերեսը(մ քառ.)</span>
                                         
-                                        <input type="number" name="area" class="form-control" placeholder="Մ &sup2" value="<?php echo $EditStatementResult->area ?> " required>
+                                        <input type="number" name="area" class="form-control" placeholder="Մ &sup2" value="<?php echo $EditStatementResult->area ?>" required>
                                     </div>
                                     <br>
                                     <div class="input-group">
