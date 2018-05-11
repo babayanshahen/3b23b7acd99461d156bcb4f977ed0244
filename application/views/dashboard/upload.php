@@ -235,22 +235,36 @@
                                         </select>
                                         <select class="form-control" name="floor" required>
                                             <option value="">Նշել բնակարանի հարկը</option>
-                                            <option value="1" <?php echo   selectOldValue(1,$EditStatementResult->floor) ?> >1</option>
-                                            <option value="2" <?php echo   selectOldValue(2,$EditStatementResult->floor) ?> >2</option>
-                                            <option value="3" <?php echo   selectOldValue(3,$EditStatementResult->floor) ?> >3</option>
-                                            <option value="4" <?php echo   selectOldValue(4,$EditStatementResult->floor) ?> >4</option>
-                                            <option value="5" <?php echo   selectOldValue(5,$EditStatementResult->floor) ?> >5</option>
-                                            <option value="6" <?php echo   selectOldValue(6,$EditStatementResult->floor) ?> >6</option>
-                                            <option value="7" <?php echo   selectOldValue(7,$EditStatementResult->floor) ?> >7</option>
-                                            <option value="8" <?php echo   selectOldValue(8,$EditStatementResult->floor) ?> >8</option>
-                                            <option value="9" <?php echo   selectOldValue(9,$EditStatementResult->floor) ?> >9</option>
+                                            <option value="1"  <?php echo  selectOldValue(1,$EditStatementResult->floor) ?> >1</option>
+                                            <option value="2"  <?php echo  selectOldValue(2,$EditStatementResult->floor) ?> >2</option>
+                                            <option value="3"  <?php echo  selectOldValue(3,$EditStatementResult->floor) ?> >3</option>
+                                            <option value="4"  <?php echo  selectOldValue(4,$EditStatementResult->floor) ?> >4</option>
+                                            <option value="5"  <?php echo  selectOldValue(5,$EditStatementResult->floor) ?> >5</option>
+                                            <option value="6"  <?php echo  selectOldValue(6,$EditStatementResult->floor) ?> >6</option>
+                                            <option value="7"  <?php echo  selectOldValue(7,$EditStatementResult->floor) ?> >7</option>
+                                            <option value="8"  <?php echo  selectOldValue(8,$EditStatementResult->floor) ?> >8</option>
+                                            <option value="9"  <?php echo  selectOldValue(9,$EditStatementResult->floor) ?> >9</option>
                                             <option value="10" <?php echo  selectOldValue(10,$EditStatementResult->floor) ?> >10</option>
                                             <option value="11" <?php echo  selectOldValue(11,$EditStatementResult->floor) ?> >11</option>
                                             <option value="12" <?php echo  selectOldValue(12,$EditStatementResult->floor) ?> >12</option>
                                             <option value="13" <?php echo  selectOldValue(13,$EditStatementResult->floor) ?> >13</option>
                                             <option value="14" <?php echo  selectOldValue(14,$EditStatementResult->floor) ?> >14</option>
                                             <option value="15" <?php echo  selectOldValue(15,$EditStatementResult->floor) ?> >15</option>
-                                            <option value="16" <?php echo  selectOldValue(16,$EditStatementResult->floor) ?> >15 և ավել</option>
+                                            <option value="16" <?php echo  selectOldValue(16,$EditStatementResult->floor) ?> >16</option>
+                                            <option value="17" <?php echo  selectOldValue(17,$EditStatementResult->floor) ?> >17</option>
+                                            <option value="18" <?php echo  selectOldValue(18,$EditStatementResult->floor) ?> >18</option>
+                                            <option value="19" <?php echo  selectOldValue(19,$EditStatementResult->floor) ?> >19</option>
+                                            <option value="20" <?php echo  selectOldValue(20,$EditStatementResult->floor) ?> >20</option>
+                                            <option value="21" <?php echo  selectOldValue(21,$EditStatementResult->floor) ?> >21</option>
+                                            <option value="22" <?php echo  selectOldValue(22,$EditStatementResult->floor) ?> >22</option>
+                                            <option value="23" <?php echo  selectOldValue(23,$EditStatementResult->floor) ?> >23</option>
+                                            <option value="24" <?php echo  selectOldValue(24,$EditStatementResult->floor) ?> >24</option>
+                                            <option value="25" <?php echo  selectOldValue(25,$EditStatementResult->floor) ?> >25</option>
+                                            <option value="26" <?php echo  selectOldValue(26,$EditStatementResult->floor) ?> >26</option>
+                                            <option value="27" <?php echo  selectOldValue(27,$EditStatementResult->floor) ?> >27</option>
+                                            <option value="27" <?php echo  selectOldValue(27,$EditStatementResult->floor) ?> >27</option>
+                                            <option value="29" <?php echo  selectOldValue(29,$EditStatementResult->floor) ?> >29</option>
+                                            <option value="30" <?php echo  selectOldValue(30,$EditStatementResult->floor) ?> >30</option>
                                         </select>
                                     </div>
                                     <br>

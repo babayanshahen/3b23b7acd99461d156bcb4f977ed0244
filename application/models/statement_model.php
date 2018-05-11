@@ -83,6 +83,7 @@ class Statement_model extends CI_Model {
 	{
 		return $this->db
 					->from("$this->table")
+					->order_by('time',"DESC")
 					->where(
 						array(
 							'user_id' => (int)$id

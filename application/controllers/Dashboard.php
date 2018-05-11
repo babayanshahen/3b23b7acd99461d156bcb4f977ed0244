@@ -408,7 +408,7 @@ class Dashboard extends CI_Controller {
 	    }
 	    
 	    $config['upload_path'] 		= $path;
-	    $config['allowed_types'] 	= 'jpg';
+	    $config['allowed_types'] 	= 'jpg|jpeg|';
     	$config['overwrite']    	= TRUE;
     	$config['file_name'] 		= 'avatar_user_'.thisUserId();
 
@@ -429,6 +429,9 @@ class Dashboard extends CI_Controller {
 
 			$file = FCPATH."assets/statements-img/user-".$second."/".$first."/".$key.".jpg";
 			unlink($file);
+			$file = FCPATH."assets/statements-img/user-".$second."/".$first."/".$key.".jpeg";
+			unlink($file);
+
 		}else{
 			die("permission error");
 		}
@@ -465,7 +468,7 @@ class Dashboard extends CI_Controller {
 		}
 
 	    $config['upload_path'] 		= $path;
-	    $config['allowed_types'] 	= 'jpg';
+	    $config['allowed_types'] 	= 'jpg|jpeg';
     	$config['overwrite']    	= FALSE;
     	$config['encrypt_name'] = TRUE;
 	    return $config;

@@ -20,16 +20,15 @@
 				<?php if( is_file( (FCPATH.'assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpg') ) ): ?>
 					<?php $url = base_url('assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpg'); ?>
 					<div class="view overlay cursor" onclick="showStatement(<?php echo (int)$statement->id?>)" style="background-image: url('<?php echo $url ?>');height: 150px;background-size: cover;" >
-					<!-- <img class="img-fluid" src="<?php  ?>" alt="<?php echo $statement->name.' '.$statement->description ?>" > -->
-					<?php else: ?>
-					<img class="img-fluid" src="<?php echo base_url('assets/statements-img/default-image/default').".png"?>" alt="Card image cap">
-					<?php endif; ?>
-					<!-- <a href="#!"> -->
-					<!-- <div class="mask rgba-white-slight" data-toggle="modal" data-target="#exampleModal-<?php echo (int)$statement->id?>">
-						
-					</div> -->
-					<!-- </a> -->
-				</div>
+
+					</div>
+				<?php endif; ?>
+				<?php if( is_file(FCPATH.'assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpeg') ): ?>
+					<?php $url = base_url('assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpeg'); ?>
+					<div class="view overlay cursor" onclick="showStatement(<?php echo (int)$statement->id?>)" style="background-image: url('<?php echo $url ?>');height: 150px;background-size: cover;" >
+
+					</div>
+				<?php endif; ?>
 				<div class="card-body">
 					<h5 class="card-title p2-color"><?php echo cutString($statement->name,10) ?></h5>
 					<!-- <p class="card-text"><?php echo cutString($statement->description,10," ...") ?></p> -->

@@ -191,16 +191,6 @@ to {top: 11px; opacity: 1;}
                 <section class="module">
                     <div class="module-inner">
                         <div class="side-bar">
-                            
-                            <!--  <div class="user-info">
-                                <img class="img-profile img-circle img-responsive center-block" src="<?php echo base_url('assets/img/profile/images.jpg') ?>" alt="" title="Upload Your Image" onclick="$('#upload-avatar').trigger('click');">
-                                <input type="file" name="upload-photo" id="upload-avatar" style="display: none;" accept="image/x-png,image/jpeg, image/jpg"  >
-                                <ul class="meta list list-unstyled m-top">
-                                    <li class="name">
-                                        <?php echo $currentUser->full_name?>
-                                    </li>
-                                </ul>
-                            </div> -->
                             <div class="user-info">
                                 <a href="<?php echo base_url('dashboard') ?>">
                                     <?php if(!is_null($user->avatar)): ?>
@@ -230,6 +220,18 @@ to {top: 11px; opacity: 1;}
                                 // }
                             ?>
                             <div class="drive-wrapper drive-grid-view">
+                            <?php if ($this->session->userdata('add_statement_success')  ): ?>
+                                        <h2 class="title">
+                                            <?php echo $this->session->userdata('add_statement_success')?>
+                                        </h2>
+                                        <?php $this->session->unset_userdata('add_statement_success'); ?>
+                                    <?php endif; ?>
+                                    <?php if ($this->session->userdata('add_update_success')  ): ?>
+                                    <h2 class="title">
+                                    <?php echo $this->session->userdata('add_update_success')?>
+                                    </h2>
+                                    <?php $this->session->unset_userdata('add_update_success'); ?>
+                                    <?php endif; ?>
                                 <div class="grid-items-wrapper">
                                     <div class="container-fluid">
                                         <div class="row">
