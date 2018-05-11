@@ -357,14 +357,14 @@ input::-webkit-inner-spin-button {
 
  .pag-color{
      background-color: white !important;
-     color: #FF7D85 !important;
+     color: #8D9AFF !important;
 }
  .pag-active{
-     background-color: #FF7D85 !important;
+     background-color: #8D9AFF !important;
      color: white !important;
 }
  .pag-color:hover{
-     background-color: #FF7D85 !important;
+     background-color: #8D9AFF !important;
      color: white !important;
 }
 
