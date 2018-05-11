@@ -79,10 +79,18 @@ class Statement_model extends CI_Model {
 		return $statements;
 	}
 
+	public function getStatementRecordsotal($id=false){
+		return $this->db->from($this->table)
+			->where(array('user_id' => $id))
+			->get()
+			->num_rows();
+	}
+
 	public function getMyStatements($id=false)
 	{
 		return $this->db
 					->from("$this->table")
+					->order_by('time',"DESC")
 					->where(
 						array(
 							'user_id' => (int)$id

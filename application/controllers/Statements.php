@@ -146,23 +146,23 @@ class Statements extends CI_Controller {
 			$this->load->model("top_items_model");
 			$this->load->model("users_model");
 			$this->load->library('pagination');
-
 			$page = $this->uri->segment(4,0);
-			// echo $page;
 			$per_page = 12;
 			$where = array(
 				'user_id'	=> $id
 			);
+
 			$statements = $this->statement_model->getStatementRecords('statements',$per_page,$page,$where);
 
 			$data = array(
 					'statements'	=> $statements,
-					'topItems'		=> $topItems  = $this->top_items_model->getTopItems(),
+					'topItems'		=>  $this->top_items_model->getTopItems(),
 					'postItem'		=> !empty($this->input->post())  ? $this->input->post()	: false,
 					'userStatement'	=> true,
 					'userDetails'	=> $this->users_model->getUserById($id)
 
 				);
+			$this->pagination->initialize($this->set_pagination_param($per_page,$this->statement_model->getStatementRecordsotal($id),base_url('statements/userStatement/'.$id),4 ) );
 
 			$this->load->template('statements',$data);
 		}else{
