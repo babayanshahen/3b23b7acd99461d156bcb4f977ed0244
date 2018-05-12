@@ -56,22 +56,18 @@ if (!function_exists('drawImage')) {
 
             if(is_file( (FCPATH.'assets/statements-img/user-'.$statement_user_id.'/'.$statement_id.'/'.$statement_image->key).'.jpg'))
             {
+
                 $link = base_url('assets/statements-img/user-'.$statement_user_id.'/'.$statement_id.'/'.$statement_image->key).'.jpg';
                 $onclick =  "showImageLargeFormat('".$link."')";
-                // $content .=  
-                //             "<div class='column'>
-                //                         <img src='".base_url('assets/statements-img/user-'.$statement_user_id.'/'.$statement_id.'/'.$statement_image->key).".jpg' alt='Nature'  class='img-thumbnail' width='200' height='200'>
-                //                     </div>";
                 $value = ($value == 0) ? 'active'  : '';
                 $content .= "<div class='testing' onclick=".$onclick." style='background-image:url(".$link.")'></div>";
-            }else{
-                $content .=  
-                    "<div data-p='170.00'>
-                                <img data-u='image' src='".base_url('assets/statements-img/default-image/default').".png' />
-                                <div data-u='thumb'>
-                                    <img data-u='thumb' class='i' src='".base_url('assets/statements-img/default-image/default').".png'  style='width: 95px;height: 48px;'/>
-                                </div>
-                            </div>";
+            }
+            if( is_file(FCPATH.'assets/statements-img/user-'.$statement_user_id.'/'.$statement_id.'/'.$statement_image->key.'.jpeg'))
+            {
+                $link = base_url('assets/statements-img/user-'.$statement_user_id.'/'.$statement_id.'/'.$statement_image->key).'.jpeg';
+                $onclick =  "showImageLargeFormat('".$link."')";
+                $value = ($value == 0) ? 'active'  : '';
+                $content .= "<div class='testing' onclick=".$onclick." style='background-image:url(".$link.")'></div>";
             }
         }
 
