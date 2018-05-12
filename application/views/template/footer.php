@@ -1,29 +1,52 @@
 <?php $this->load->view('items/modal'); ?>
 <?php if ( $this->uri->segment(0) != null): ?>
-<footer class="page-footer font-small foot-back pt-4 mt-4">
-	<div class="container-fluid text-center text-md-left">
-		<div class="row">
-			<div class="col-md-6">
-				<h5 class="text-uppercase">Footer Content</h5>
-				<p>Here you can use rows and columns here to organize your footer content.</p>
-			</div>
-			<div class="col-md-6">
-				<h5 class="text-uppercase">Links</h5>
-				<ul class="list-unstyled">
-					<li><a href="#!">Link 1</a></li>
-					<li><a href="#!">Link 2</a></li>
-					<li><a href="#!">Link 3</a></li>
-					<li><a href="#!">Link 4</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="footer-copyright py-3 text-center">
-		<div class="container-fluid">
-			MADE BY ARTUR GEVORGYAN
-		</div>
-	</div>
+<!--Footer-->
+<footer class="page-footer font-small blue pt-4 mt-4">
+
+    <!--Footer Links-->
+    <div class="container-fluid text-center text-md-left">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6">
+                <h5 class="text-uppercase">Footer Content</h5>
+                <p>Here you can use rows and columns here to organize your footer content.</p>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-6">
+                <h5 class="text-uppercase">Links</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright:
+        <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
+    </div>
+    <!--/.Copyright-->
+
 </footer>
+<!--/.Footer-->
+                  
 <?php endif ?>
 <!-- scripts -->
 <script type="text/javascript" src="<?php  echo base_url('assets/js/popper.min.js')?>"></script>

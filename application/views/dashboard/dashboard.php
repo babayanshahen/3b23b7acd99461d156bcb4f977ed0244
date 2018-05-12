@@ -240,11 +240,18 @@ to {top: 11px; opacity: 1;}
                                             <!-- onclick="statementEdit( $(this).attr('data-statement-id') )" data-statement-id="<?php echo  $statement->id ?>" -->
                                             <div class="col-md-4 col-sm-6">
                                                     <div class="custom-card mb-4">
-                                                        <?php if(is_file( (FCPATH.'assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpg') )): ?>
-                                                        <img src="<?php echo base_url('assets/statements-img/user-').$statement->user_id.'/'.$statement->id.'/'.$statement->main_image?>.jpg" alt="Avatar" style="width:100%">
-                                                        <?php else: ?>
-                                                        <img src="<?php echo  base_url('assets/statements-img/default-image/default')?>.png" style="width:100%" >
-                                                        <?php endif ?>
+                                                        <?php if( is_file( (FCPATH.'assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpg') ) ): ?>
+                                                            <?php $url = base_url('assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpg'); ?>
+                                                            <div class="view overlay cursor" onclick="showStatement(<?php echo (int)$statement->id?>)" style="background-image: url('<?php echo $url ?>');height: 150px;background-size: cover;" >
+
+                                                            </div>
+                                                        <?php endif; ?>
+                                                        <?php if( is_file(FCPATH.'assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpeg') ): ?>
+                                                            <?php $url = base_url('assets/statements-img/user-'.$statement->user_id.'/'.$statement->id.'/'.$statement->main_image.'.jpeg'); ?>
+                                                            <div class="view overlay cursor" onclick="showStatement(<?php echo (int)$statement->id?>)" style="background-image: url('<?php echo $url ?>');height: 150px;background-size: cover;" >
+
+                                                            </div>
+                                                        <?php endif; ?>
                                                         <div class="custom-container">
                                                             <h4><b><?php echo  cutString($statement->name,15) ?></b></h4>
                                                             <!-- <p><?php //echo cutString($statement->description , 50) ?></p> -->
